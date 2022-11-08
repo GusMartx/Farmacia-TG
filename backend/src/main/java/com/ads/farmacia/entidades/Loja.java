@@ -3,10 +3,16 @@ package com.ads.farmacia.entidades;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "tb_loja")
 public class Loja implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
+	@Id
 	public Integer cnpj;
 	public String logradouro;
 	public Integer numero;
@@ -14,14 +20,13 @@ public class Loja implements Serializable{
 	public String complemento;
 	public String cidade;
 	public String uf;
-	public Integer ddd;
-	public Integer telefone;
+	public String telefone;
 	public String franquia;
 
 	public Loja() {
 	}
 
-	public Loja(Integer cnpj, String logradouro, Integer cep, Integer telefone, String franquia) {
+	public Loja(Integer cnpj, String logradouro, Integer cep, String telefone, String franquia) {
 		this.cnpj = cnpj;
 		this.logradouro = logradouro;
 		this.cep = cep;
@@ -61,11 +66,11 @@ public class Loja implements Serializable{
 		this.uf = uf;
 	}
 
-	public Integer getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(Integer telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
@@ -79,10 +84,6 @@ public class Loja implements Serializable{
 
 	public Integer getCep() {
 		return cep;
-	}
-
-	public Integer getDdd() {
-		return ddd;
 	}
 
 	public String getFranquia() {
