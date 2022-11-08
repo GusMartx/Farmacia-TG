@@ -12,7 +12,7 @@
 	<groupId>com.ads</groupId>
 	<artifactId>farmacia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dscatalog</name>
+	<name>farmacia</name>
 	<description>Trabalho de Graduacao</description>
 
 	<properties>
