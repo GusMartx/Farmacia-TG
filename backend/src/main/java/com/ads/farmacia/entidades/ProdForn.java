@@ -1,7 +1,6 @@
 package com.ads.farmacia.entidades;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -16,13 +15,14 @@ public class ProdForn implements Serializable {
 	@Id
 	private Integer codBarras;
 	private double preco;
-	private ArrayList<Produto> produto;
-	private ArrayList<Fornecedor> fornecedor;
+	private Produto produto;
+	private Fornecedor fornecedor;
+	private ItemPedido itemPedido;
 
 	public ProdForn() {
 	}
 
-	public ProdForn(Integer codBarras, ArrayList<Produto> produto, ArrayList<Fornecedor> fornecedor) {
+	public ProdForn(Integer codBarras, Produto produto, Fornecedor fornecedor) {
 		this.codBarras = codBarras;
 		this.produto = produto;
 		this.fornecedor = fornecedor;
@@ -44,20 +44,28 @@ public class ProdForn implements Serializable {
 		this.preco = preco;
 	}
 
-	public ArrayList<Produto> getProduto() {
+	public Produto getProduto() {
 		return produto;
 	}
 
-	public void setProduto(ArrayList<Produto> produto) {
+	public void setProduto(Produto produto) {
 		this.produto = produto;
 	}
 
-	public ArrayList<Fornecedor> getFornecedor() {
+	public Fornecedor getFornecedor() {
 		return fornecedor;
 	}
 
-	public void setFornecedor(ArrayList<Fornecedor> fornecedor) {
+	public void setFornecedor(Fornecedor fornecedor) {
 		this.fornecedor = fornecedor;
+	}
+
+	public ItemPedido getItemPedido() {
+		return itemPedido;
+	}
+
+	public void setItemPedido(ItemPedido itemPedido) {
+		this.itemPedido = itemPedido;
 	}
 
 	@Override

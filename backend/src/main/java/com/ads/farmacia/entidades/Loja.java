@@ -1,6 +1,7 @@
 package com.ads.farmacia.entidades;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -13,16 +14,20 @@ public class Loja implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	public Integer cnpj;
-	public String logradouro;
-	public Integer ibge;
-	public Integer numero;
-	public Integer cep;
-	public String complemento;
-	public String cidade;
-	public String uf;
-	public String telefone;
-	public String franquia;
+	private Integer cnpj;
+	private String logradouro;
+	private Integer ibge;
+	private Integer numero;
+	private Integer cep;
+	private String complemento;
+	private String cidade;
+	private String uf;
+	private String telefone;
+	private String franquia;
+	private ArrayList<Usuario> usuarios;
+	private ArrayList<Estoque> estoques;
+	private ArrayList<Movimentacao> movimentacoes;
+	private ArrayList<Pedido> pedidos;
 
 	public Loja() {
 	}
@@ -94,6 +99,38 @@ public class Loja implements Serializable {
 
 	public String getFranquia() {
 		return franquia;
+	}
+
+	public ArrayList<Usuario> getUsuarios() {
+		return usuarios;
+	}
+
+	public void setUsuarios(ArrayList<Usuario> usuarios) {
+		this.usuarios = usuarios;
+	}
+
+	public ArrayList<Estoque> getEstoques() {
+		return estoques;
+	}
+
+	public void setEstoques(ArrayList<Estoque> estoques) {
+		this.estoques = estoques;
+	}
+
+	public ArrayList<Movimentacao> getMovimentacoes() {
+		return movimentacoes;
+	}
+
+	public void setMovimentacoes(ArrayList<Movimentacao> movimentacoes) {
+		this.movimentacoes = movimentacoes;
+	}
+
+	public ArrayList<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(ArrayList<Pedido> pedidos) {
+		this.pedidos = pedidos;
 	}
 
 	@Override

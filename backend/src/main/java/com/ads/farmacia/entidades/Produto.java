@@ -1,6 +1,7 @@
 package com.ads.farmacia.entidades;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -26,6 +27,7 @@ public class Produto implements Serializable {
 	private String restricao;
 	private double miligrama;
 	private String direcionamento;
+	private ArrayList<ProdForn> prodForn;
 
 	public Produto() {
 	}
@@ -150,6 +152,14 @@ public class Produto implements Serializable {
 
 	public void setDirecionamento(String direcionamento) {
 		this.direcionamento = direcionamento;
+	}
+
+	public ArrayList<ProdForn> getProdForn() {
+		return prodForn;
+	}
+
+	public void setProdForn(ArrayList<ProdForn> prodForn) {
+		this.prodForn = prodForn;
 	}
 
 	@Override

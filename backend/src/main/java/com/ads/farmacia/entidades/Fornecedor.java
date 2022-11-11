@@ -1,6 +1,7 @@
 package com.ads.farmacia.entidades;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -14,15 +15,16 @@ public class Fornecedor implements Serializable {
 
 	@Id
 	private Integer cnpj;
-	public String logradouro;
-	public Integer ibge;
-	public Integer numero;
-	public Integer cep;
-	public String complemento;
-	public String cidade;
-	public String uf;
-	public String telefone;
-	public String razaoSocial;
+	private String logradouro;
+	private Integer ibge;
+	private Integer numero;
+	private Integer cep;
+	private String complemento;
+	private String cidade;
+	private String uf;
+	private String telefone;
+	private String razaoSocial;
+	private ArrayList<ProdForn> prodForn;
 
 	public Fornecedor() {
 	}
@@ -89,6 +91,14 @@ public class Fornecedor implements Serializable {
 
 	public String getUf() {
 		return uf;
+	}
+
+	public ArrayList<ProdForn> getProdForn() {
+		return prodForn;
+	}
+
+	public void setProdForn(ArrayList<ProdForn> prodForn) {
+		this.prodForn = prodForn;
 	}
 
 	@Override

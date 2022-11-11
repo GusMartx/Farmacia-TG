@@ -9,9 +9,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_usuario")
-public class Usuario implements Serializable{
+public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private Integer cpf;
 	private Integer crf;
@@ -21,6 +21,7 @@ public class Usuario implements Serializable{
 	private String cargo;
 	private String telefone;
 	private String situacao = "Pendente";
+	private Loja loja;
 
 	public Usuario() {
 	}
@@ -89,6 +90,14 @@ public class Usuario implements Serializable{
 
 	public void setSituacao(String situacao) {
 		this.situacao = situacao;
+	}
+
+	public Loja getLoja() {
+		return loja;
+	}
+
+	public void setLoja(Loja loja) {
+		this.loja = loja;
 	}
 
 	@Override
