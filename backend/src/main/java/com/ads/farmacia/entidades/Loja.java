@@ -9,12 +9,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_loja")
-public class Loja implements Serializable{
+public class Loja implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	public Integer cnpj;
 	public String logradouro;
+	public Integer ibge;
 	public Integer numero;
 	public Integer cep;
 	public String complemento;
@@ -26,9 +27,10 @@ public class Loja implements Serializable{
 	public Loja() {
 	}
 
-	public Loja(Integer cnpj, String logradouro, Integer cep, String telefone, String franquia) {
+	public Loja(Integer cnpj, String logradouro, Integer ibge, Integer cep, String telefone, String franquia) {
 		this.cnpj = cnpj;
 		this.logradouro = logradouro;
+		this.ibge = ibge;
 		this.cep = cep;
 		this.telefone = telefone;
 		this.franquia = franquia;
@@ -76,6 +78,10 @@ public class Loja implements Serializable{
 
 	public Integer getCnpj() {
 		return cnpj;
+	}
+
+	public Integer getIbge() {
+		return ibge;
 	}
 
 	public String getLogradouro() {
