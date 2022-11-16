@@ -1,40 +1,47 @@
 package com.ads.farmacia.entidades;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Table(name = "tb_item_pedido")
 public class ItemPedido {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private Integer quantidade;
-	private ArrayList<ProdForn> prodForn;
+	private ProdForn produto;
+	private Pedido pedido;
+
+	public ItemPedido() {
+	}
+
+	public ItemPedido(Integer id, Integer quantidade, ProdForn produto) {
+		this.id = id;
+		this.quantidade = quantidade;
+		this.produto = produto;
+	}
 
 	public Integer getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(Integer quantidade) {
-		this.quantidade = quantidade;
-	}
-
-	public ArrayList<ProdForn> getProdForn() {
-		return prodForn;
-	}
-
-	public void setProdForn(ArrayList<ProdForn> prodForn) {
-		this.prodForn = prodForn;
-	}
-
 	public Integer getId() {
 		return id;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
+
+	public ProdForn getProduto() {
+		return produto;
 	}
 
 	@Override

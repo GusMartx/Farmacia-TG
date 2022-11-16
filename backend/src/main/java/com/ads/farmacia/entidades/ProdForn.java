@@ -17,7 +17,6 @@ public class ProdForn implements Serializable {
 	private double preco;
 	private Produto produto;
 	private Fornecedor fornecedor;
-	private ItemPedido itemPedido;
 
 	public ProdForn() {
 	}
@@ -30,10 +29,6 @@ public class ProdForn implements Serializable {
 
 	public Integer getCodBarras() {
 		return codBarras;
-	}
-
-	public void setCodBarras(Integer codBarras) {
-		this.codBarras = codBarras;
 	}
 
 	public double getPreco() {
@@ -58,14 +53,6 @@ public class ProdForn implements Serializable {
 
 	public void setFornecedor(Fornecedor fornecedor) {
 		this.fornecedor = fornecedor;
-	}
-
-	public ItemPedido getItemPedido() {
-		return itemPedido;
-	}
-
-	public void setItemPedido(ItemPedido itemPedido) {
-		this.itemPedido = itemPedido;
 	}
 
 	@Override

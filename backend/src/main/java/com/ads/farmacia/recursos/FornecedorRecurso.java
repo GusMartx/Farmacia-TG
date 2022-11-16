@@ -12,7 +12,7 @@ import com.ads.farmacia.entidades.Fornecedor;
 import com.ads.farmacia.servicos.FornecedorServico;
 
 @RestController
-@RequestMapping(value = "/lojas")
+@RequestMapping(value = "/fornecedores")
 public class FornecedorRecurso {
 
 	@Autowired

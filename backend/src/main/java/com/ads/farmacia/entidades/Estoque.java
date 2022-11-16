@@ -40,48 +40,24 @@ public class Estoque implements Serializable {
 		return codOperacao;
 	}
 
-	public void setCodOperacao(Integer codOperacao) {
-		this.codOperacao = codOperacao;
-	}
-
 	public String getDataValidade() {
 		return dataValidade;
-	}
-
-	public void setDataValidade(String dataValidade) {
-		this.dataValidade = dataValidade;
 	}
 
 	public Long getLote() {
 		return lote;
 	}
 
-	public void setLote(Long lote) {
-		this.lote = lote;
-	}
-
 	public Integer getQtdeCaixa() {
 		return qtdeCaixa;
-	}
-
-	public void setQtdeCaixa(Integer qtdeCaixa) {
-		this.qtdeCaixa = qtdeCaixa;
 	}
 
 	public Loja getLoja() {
 		return loja;
 	}
 
-	public void setLoja(Loja loja) {
-		this.loja = loja;
-	}
-
 	public ProdForn getProduto() {
 		return produto;
-	}
-
-	public void setProduto(ProdForn produto) {
-		this.produto = produto;
 	}
 
 	@Override

@@ -1,6 +1,7 @@
 package com.ads.farmacia.entidades;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -18,25 +19,18 @@ public class Pedido implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer numPedido;
 	private String dataCriacao;
-	private ItemPedido itemPedido;
+	private boolean status;
+	ArrayList<ItemPedido> itemPedidos = new ArrayList<ItemPedido>();
 	private Loja loja;
 
 	public Pedido() {
 	}
 
-	public Pedido(Integer numPedido, String dataCriacao, ItemPedido itemPedido, Loja loja) {
+	public Pedido(Integer numPedido, String dataCriacao, Loja loja) {
 		this.numPedido = numPedido;
 		this.dataCriacao = dataCriacao;
-		this.itemPedido = itemPedido;
 		this.loja = loja;
-	}
-
-	public ItemPedido getItemPedido() {
-		return itemPedido;
-	}
-
-	public void setItemPedido(ItemPedido itemPedido) {
-		this.itemPedido = itemPedido;
+		itemPedidos = new ArrayList<ItemPedido>();
 	}
 
 	public Integer getNumPedido() {
@@ -49,6 +43,14 @@ public class Pedido implements Serializable {
 
 	public Loja getLoja() {
 		return loja;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 
 	@Override
